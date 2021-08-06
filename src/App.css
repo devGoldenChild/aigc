@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --primary-color: #0078d7;
+  --secondary-color: #ffd868;
+  --white-color: #f2f2f2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.page-header {
+  background: var(--primary-color);
+  color: var(--white-color);
+  width: 100%;
+}
+
+.container {
+  max-width: 1140px;
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.page-header-content {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.page-banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("./assets/images/banner-bg.jpg");
+  background-size: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-right: 15px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.btn-secondary {
+  border: 1px solid var(--secondary-color);
+  color: var(--white-color);
+}
+
+.btn-lg {
+  padding: 10px 40px;
+}
+
+.services {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("./assets/images/services-bg.jpg");
+  background-size: cover;
+  padding-bottom: 100px;
+}
+
+.section-title {
+  font-size: 30px;
+  font-weight: 700;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #ffd868;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-title {
+  margin-bottom: 30px;
+}
+
+.section-title span {
+  color: var(--primary-color);
+}
+
+.service-card {
+  background: rgba(0, 118, 215, 0.8);
 }
